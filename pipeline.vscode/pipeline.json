@@ -1,0 +1,91 @@
+{
+  "scopeName": "source.pipeline",
+  "patterns": [{ "include": "#expression" }],
+  "repository": {
+    "expression": {
+      "patterns": [
+        { "include": "#keywords"}, 
+        { "include": "#keywords_2" },
+        { "include": "#comment" },
+        { "include": "#class_name_1" },
+        { "include": "#class_name_2" },
+        { "include": "#variable_1" },
+        { "include": "#variable_2" },
+        { "include": "#variable_3" },
+        { "include": "#variable_4" },
+        { "include": "#number" },
+        { "include": "#semicolon" },
+        { "include": "#curly_bracket_begin" },
+        { "include": "#curly_bracket_end" },
+        { "include": "#colon" },
+        { "include": "#range_delimiter" },
+        { "include": "#quoted_string" }
+      ]
+    },
+    "keywords": {
+      "match": "\\b(null|duration|group|after|range|label|event|finish|start|at|period|to)\\b",
+      "name": "keyword.control.pipeline"
+    },
+    "keywords_2": {
+      "match": "\\btask\\b",
+      "name": "keyword.other.pipeline"
+    },
+    "comment": {
+      "match": "//.*",
+      "name": "comment.line.double-slash.pipeline"
+    },
+    "class_name_1": {
+      "name": "entity.name.type.class.1.pipeline",
+      "match": "(?<=\\btask\\s+)([A-Za-z_][A-Za-z0-9_]*)"
+    },
+    "variable_1": {
+      "name": "entity.name.variable.1.pipeline",
+      "match": "(?<=\\bafter\\s+)([a-zA-Z_][a-zA-Z0-9_]*)(\\s+[a-zA-Z_][a-zA-Z0-9_]*)*\\b"
+    },
+    "class_name_2": {
+      "name": "entity.name.type.class.2.pipeline",
+      "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s+(?=\\S+\\s+range)\\b"
+    },
+    "variable_2": {
+      "name": "entity.name.variable.2.pipeline",
+      "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s+(?=range)\\b"
+    },
+    "variable_3": {
+      "name": "entity.name.variable.3.pipeline",
+      "match": "(\\b[A-Za-z_][A-Za-z0-9_]*\\b)(?=\\s+after)"
+    },
+    "variable_4": {
+      "name": "entity.name.variable.4.pipeline",
+      "match": "(?<=\\b(to|at|period|event)\\s+)([A-Za-z_][A-Za-z0-9_]*)"
+    },
+    "quoted_string": {
+      "name": "string.quoted.double.pipeline",
+      "begin": "\"",
+      "end": "\""
+    },
+    "number": {
+      "name": "constant.numeric.pipeline",
+      "match": "\\b(\\d+|\\d*\\.\\d+)\\b"
+    },
+    "semicolon": {
+      "name": "punctuation.terminator.statement.pipeline",
+      "match": ";"
+    },
+    "curly_bracket_begin": {
+      "name": "punctuation.definition.dictionary.begin.pipeline",
+      "match": "\\{"
+    },
+    "curly_bracket_end": {
+      "name": "punctuation.definition.dictionary.end.pipeline",
+      "match": "\\}"
+    },
+    "colon": {
+      "name": "punctuation.separator.colon.pipeline",
+      "match": ":"
+    },
+    "range_delimiter": {
+      "name": "punctuation.separator.range.pipeline",
+      "match": "-"
+    }
+  }
+}

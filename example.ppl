@@ -1,0 +1,70 @@
+task ThereD{
+    duration: 1;
+    group: "there";
+};
+task HereD {
+    duration: 1.5;
+    group: "here";
+};
+task ThereT {
+    duration: 4;
+    group: "there";
+};
+task HereT {
+    duration: 2;
+    group: "here";
+};
+
+ThereD dc range 1-10 label "D";
+HereD dd range 1-10 label "D";
+ThereD rc range 1-10 label "R";
+HereD rd range 1-10 label "R";
+ThereT tc range 1-10 label "T";
+ThereT tc_ range 1-10 label "T";
+HereT td range 1-10 label "T";
+HereT td_ok range 1-10 label "OK";
+
+tc1 after dc1;
+tc2 after dc2;
+tc3 after dc3;
+tc4 after dc4;
+tc5 after dc5;
+tc6 after dc6;
+dc1 after null;
+dc2 after dc1;
+dc3 after dc2;
+dc4 after dc3;
+dc5 after dc4;
+dc6 after dc5;
+dd1 after null;
+dd2 after dd1;
+dd3 after dd2;
+
+rd2 after tc1 dd1 dd2;
+rd3 after tc2 rd2;
+dd4 after tc3 rd3;
+dd5 after tc4 dd4;
+td_ok1 after tc1;
+td_ok2 after rd2;
+td_ok3 after rd3;
+td4 after dd4;
+rc5 after td4; tc_5 after rc5;
+rc6 after rc5; tc_6 after rc6;
+dc7 after rc6; tc_7 after dc7;
+dc8 after dc7; tc_8 after dc8;
+dc9 after dc8; tc_9 after dc9;
+dc10 after dc9; tc_10 after dc10;
+
+dd6 after tc_5;
+dd7 after tc_6 dd6;
+dd8 after tc_7 dd7;
+dd9 after tc_8 dd8;
+td_ok5 after tc_5;
+td_ok6 after dd6;
+td_ok7 after dd7;
+td8 after dd8;
+
+event e1 at td4 finish label "TD4 Finish";
+event e2 at tc_5 finish;
+
+period e1 to e2 label "one period";

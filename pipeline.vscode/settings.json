@@ -1,0 +1,55 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "punctuation.definition.dictionary.begin.pipeline",
+                "settings": {
+                    "foreground": "#ddc871"
+                }
+            },
+            {
+                "scope": "punctuation.definition.dictionary.end.pipeline",
+                "settings": {
+                    "foreground": "#ddc871"
+                }
+            },
+            {
+                "scope": "punctuation.terminator.statement.pipeline",
+                "settings": {
+                    "foreground": "#ddc871"
+                }
+            },
+            {
+                "scope": "constant.numeric.pipeline",
+                "settings": {
+                    "foreground": "#b7d07a"
+                }
+            },
+            {
+                "scope": "punctuation.separator.colon.pipeline",
+                "settings": {
+                    "foreground": "#ddc871"
+                }
+            },
+            {
+                "scope": "keyword.other.pipeline",
+                "settings": {
+                    "foreground": "#2775b6",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "keyword.control.pipeline",
+                "settings": {
+                    "foreground": "#0f95b0",
+                }
+            },
+            {
+                "scope": "punctuation.separator.range.pipeline",
+                "settings": {
+                    "foreground": "#ddc871"
+                }
+            }
+        ]
+    }
+}

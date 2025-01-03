@@ -1,0 +1,33 @@
+{
+    "name": "pipeline_syntax",
+    "displayName": "Pipeline Syntax",
+    "description": "Syntax definition of the Pipeline DSL",
+    "version": "0.0.1",
+    "publisher": "Qingchuan Liu",
+    "engines": {
+      "vscode": "^1.0.0"
+    },
+    "contributes": {
+    "languages": [
+      {
+        "id": "pipeline",
+        "extensions": [".ppl"]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pipeline",
+        "scopeName": "source.pipeline",
+        "path": "./pipeline.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Pipeline Theme",
+        "uiTheme": "vs-dark",
+        "path": "./theme.json"
+      }
+    ]
+  }
+  }
+  
