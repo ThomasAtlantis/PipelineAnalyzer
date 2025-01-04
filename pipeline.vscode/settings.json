@@ -41,13 +41,33 @@
             {
                 "scope": "keyword.control.pipeline",
                 "settings": {
-                    "foreground": "#0f95b0",
+                    "foreground": "#17CBE7",
+                    "fontStyle": "italic"
                 }
             },
             {
                 "scope": "punctuation.separator.range.pipeline",
                 "settings": {
                     "foreground": "#ddc871"
+                }
+            },
+            {
+                "scope": "keyword.control.preprocess.pipeline",
+                "settings": {
+                    "foreground": "#05E2C0",
+                }
+            },
+            {
+                "scope": "comment.line.double-slash.pipeline",
+                "settings": {
+                    "foreground": "#708500",
+                }
+            },
+            {
+                "scope": "string.quoted.double.pipeline",
+                "settings": {
+                    "foreground": "#90DD69",
+                    "fontStyle": "underline"
                 }
             }
         ]
