@@ -104,6 +104,7 @@ class PipelineParser:
         "start":    Keyword("start"),
         "period":   Keyword("period"),
         "to":       Keyword("to"),
+        "include":  Keyword("include"),
     }
     _tokens = {
         "task_cls": Word(alphas + "_"),
@@ -115,6 +116,14 @@ class PipelineParser:
         "label":    QuotedString('"'),
         "event":    Word(alphanums + "_"),
     }
+
+    def _preprocess(self, string):
+        def preprocess_include(match):
+            file_name = match.group(1)
+            with open(file_name, "r") as istream:
+                return istream.read()
+        string = re.sub(r'^\s*#include\s+"([^"]+)"', preprocess_include, string)
+        return string
 
     def _task_declaration(self):
         def to_dict(tokens):
@@ -216,6 +225,7 @@ class PipelineParser:
     
     def parse_string(self, string):
         self.pipeline = Pipeline()
+        string = self._preprocess(string)
         self.parser.parseString(string)
         return self.pipeline
 

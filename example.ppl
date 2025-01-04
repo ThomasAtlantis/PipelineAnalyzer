@@ -1,29 +1,5 @@
-task ThereD{
-    duration: 1;
-    group: "there";
-};
-task HereD {
-    duration: 1.5;
-    group: "here";
-};
-task ThereT {
-    duration: 4;
-    group: "there";
-};
-task HereT {
-    duration: 2;
-    group: "here";
-};
-
-ThereD dc range 1-10 label "D";
-HereD dd range 1-10 label "D";
-ThereD rc range 1-10 label "R";
-HereD rd range 1-10 label "R";
-ThereT tc range 1-10 label "T";
-ThereT tc_ range 1-10 label "T";
-HereT td range 1-10 label "T";
-HereT td_ok range 1-10 label "OK";
-
+#include "example_h.ppl"
+// jlkjlk
 tc1 after dc1;
 tc2 after dc2;
 tc3 after dc3;

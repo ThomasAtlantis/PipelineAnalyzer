@@ -19,7 +19,8 @@
         { "include": "#curly_bracket_end" },
         { "include": "#colon" },
         { "include": "#range_delimiter" },
-        { "include": "#quoted_string" }
+        { "include": "#quoted_string" },
+        { "include": "#preprocess_expression" }
       ]
     },
     "keywords": {
@@ -86,6 +87,10 @@
     "range_delimiter": {
       "name": "punctuation.separator.range.pipeline",
       "match": "-"
+    },
+    "preprocess_expression": {
+      "name": "keyword.control.preprocess.pipeline",
+      "match": "^\\s*#include\\b"
     }
   }
 }
