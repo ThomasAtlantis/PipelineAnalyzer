@@ -1,4 +1,4 @@
-from pipeline_parser import Task, Event, Period
+from .pipeline_parser import Task, Event, Period
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.patches import ArrowStyle
