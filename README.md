@@ -70,7 +70,7 @@ In the following tutorial, we use `Command("command")` to represent searching an
 
 ### Highlight Example
 
-![Highlight Example](./assets/highlight_example.png | width=200)
+![Highlight Example](./assets/highlight_example.png)
 ## Example of Usage
 
 We provide an example of usage in `example.py` with dependency definitions in `example.ppl`/`example_h.ppl` and output figure `example.png`.
