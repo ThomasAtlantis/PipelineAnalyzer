@@ -66,7 +66,7 @@ Pipeline is sensitive to capitalization and insensitive to line break between wo
 In the following tutorial, we use `Command("command")` to represent searching and running the command `<command>` in VSCode Command Palette. Usually, you can open the palette by shotcut keys `Shift + Command + P` in MacOS and `Ctrl + Shift + P` in Windows/Linux.
 1. Clone or download this repository.
 2. Command("Extensions: Open Extensions Folder") -> Copy the directry `pipeline.vscode` to the extensions folder -> Command("Developer: Reload Window")
-3. Command("Preferences: Open User Settings (JSON)") -> Copy JSON settings in `pipeline.vscode/settings.json` (starting from Line 2) and insert them into the VSCode's user settings.
+3. Command("Preferences: Open User Settings (JSON)") -> Copy JSON settings in `pipeline.vscode/settings.json` (starting from Line 2) and insert them into the VSCode's user settings. Alternatively, you can simply move the JSON file to the `.vscode` folder in the root directory of your project, and its effect will be limited to this project only.
 
 ### Highlight Example
 
